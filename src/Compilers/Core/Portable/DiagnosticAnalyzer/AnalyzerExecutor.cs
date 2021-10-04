@@ -28,7 +28,7 @@ namespace Microsoft.CodeAnalysis.Diagnostics
     /// <summary>
     /// Contains the core execution logic for callbacks into analyzers.
     /// </summary>
-    internal partial class AnalyzerExecutor
+    internal sealed partial class AnalyzerExecutor
     {
         private const string DiagnosticCategory = "Compiler";
 

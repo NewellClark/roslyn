@@ -13,7 +13,7 @@ namespace Microsoft.CodeAnalysis
         /// <summary>
         /// A trivial DocumentationProvider which never returns documentation.
         /// </summary>
-        private class NullDocumentationProvider : DocumentationProvider
+        private sealed class NullDocumentationProvider : DocumentationProvider
         {
             protected internal override string GetDocumentationForSymbol(string documentationMemberID, CultureInfo preferredCulture, CancellationToken cancellationToken = default(CancellationToken))
             {

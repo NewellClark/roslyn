@@ -14,7 +14,7 @@ namespace Roslyn.Utilities
     /// <see cref="HasFailedToDispose" /> after disposal to see if any
     /// exceptions were thrown during disposal.
     /// </summary>
-    internal class NoThrowStreamDisposer : IDisposable
+    internal sealed class NoThrowStreamDisposer : IDisposable
     {
         private bool? _failed; // Nullable to assert that this is only checked after dispose
         private readonly string _filePath;

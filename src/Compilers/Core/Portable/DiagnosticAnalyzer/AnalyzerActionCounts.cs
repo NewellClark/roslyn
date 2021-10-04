@@ -9,7 +9,7 @@ namespace Microsoft.CodeAnalysis.Diagnostics.Telemetry
     /// <summary>
     /// Contains the counts of registered actions for an analyzer.
     /// </summary>
-    internal class AnalyzerActionCounts
+    internal sealed class AnalyzerActionCounts
     {
         internal static readonly AnalyzerActionCounts Empty = new AnalyzerActionCounts(in AnalyzerActions.Empty);
 

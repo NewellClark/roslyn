@@ -6,7 +6,7 @@
 
 namespace Microsoft.CodeAnalysis.Diagnostics
 {
-    internal partial class SuppressMessageAttributeState
+    internal sealed partial class SuppressMessageAttributeState
     {
         internal enum TargetScope
         {

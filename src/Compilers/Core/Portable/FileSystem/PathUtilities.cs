@@ -823,7 +823,7 @@ namespace Roslyn.Utilities
 
         public static readonly IEqualityComparer<string> Comparer = new PathComparer();
 
-        private class PathComparer : IEqualityComparer<string?>
+        private sealed class PathComparer : IEqualityComparer<string?>
         {
             public bool Equals(string? x, string? y)
             {

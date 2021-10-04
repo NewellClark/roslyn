@@ -19,7 +19,7 @@ namespace Microsoft.CodeAnalysis.Diagnostics
     /// <summary>
     /// Stores the partial analysis state for analyzers executed on a specific compilation.
     /// </summary>
-    internal partial class AnalysisState
+    internal sealed partial class AnalysisState
     {
         private readonly SemaphoreSlim _gate;
 

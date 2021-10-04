@@ -9,7 +9,7 @@ using Microsoft.CodeAnalysis.Collections;
 
 namespace Microsoft.CodeAnalysis.Diagnostics
 {
-    internal partial class AnalyzerDriver<TLanguageKindEnum> : AnalyzerDriver where TLanguageKindEnum : struct
+    internal sealed partial class AnalyzerDriver<TLanguageKindEnum> : AnalyzerDriver where TLanguageKindEnum : struct
     {
         private sealed class GroupedAnalyzerActionsForAnalyzer
         {

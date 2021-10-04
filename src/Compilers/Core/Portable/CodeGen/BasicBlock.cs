@@ -655,7 +655,7 @@ namespace Microsoft.CodeAnalysis.CodeGen
                 return "";
             }
 
-            private class PooledBasicBlock : BasicBlock
+            private sealed class PooledBasicBlock : BasicBlock
             {
                 internal override void Free()
                 {

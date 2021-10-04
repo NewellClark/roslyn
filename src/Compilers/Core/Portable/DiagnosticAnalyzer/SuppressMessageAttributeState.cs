@@ -15,7 +15,7 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis.Diagnostics
 {
-    internal partial class SuppressMessageAttributeState
+    internal sealed partial class SuppressMessageAttributeState
     {
         private static readonly SmallDictionary<string, TargetScope> s_suppressMessageScopeTypes = new SmallDictionary<string, TargetScope>(StringComparer.OrdinalIgnoreCase)
             {
@@ -37,7 +37,7 @@ namespace Microsoft.CodeAnalysis.Diagnostics
         private StrongBox<ISymbol?>? _lazySuppressMessageAttribute;
         private StrongBox<ISymbol?>? _lazyUnconditionalSuppressMessageAttribute;
 
-        private class GlobalSuppressions
+        private sealed class GlobalSuppressions
         {
             private readonly Dictionary<string, SuppressMessageInfo> _compilationWideSuppressions = new Dictionary<string, SuppressMessageInfo>();
             private readonly Dictionary<ISymbol, Dictionary<string, SuppressMessageInfo>> _globalSymbolSuppressions = new Dictionary<ISymbol, Dictionary<string, SuppressMessageInfo>>();

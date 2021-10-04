@@ -17,7 +17,7 @@ namespace Microsoft.CodeAnalysis.Emit
     /// Error type symbols should be replaced with an object of this class 
     /// in the translation layer for emit.
     /// </summary>
-    internal class ErrorType : Cci.INamespaceTypeReference
+    internal sealed class ErrorType : Cci.INamespaceTypeReference
     {
         public static readonly ErrorType Singleton = new ErrorType();
 

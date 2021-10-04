@@ -570,7 +570,7 @@ namespace Microsoft.CodeAnalysis
             }
         }
 
-        private class Boxed
+        private sealed class Boxed
         {
             /// <summary>
             /// Diagnostic info that should be reported at the use site of the symbol, or null if there is none.

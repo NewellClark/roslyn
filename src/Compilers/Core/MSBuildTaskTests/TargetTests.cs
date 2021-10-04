@@ -1013,7 +1013,7 @@ namespace Microsoft.CodeAnalysis.BuildTasks.UnitTests
             return true;
         }
 
-        private class DummyTask : IGeneratedTask
+        private sealed class DummyTask : IGeneratedTask
         {
             public IBuildEngine? BuildEngine { get; set; }
 

@@ -13,7 +13,7 @@ namespace Microsoft.CodeAnalysis.InternalUtilities
     /// Cache with a fixed size that evicts the least recently used members.
     /// Thread-safe.
     /// </summary>
-    internal class ConcurrentLruCache<K, V>
+    internal sealed class ConcurrentLruCache<K, V>
         where K : notnull
         where V : notnull
     {

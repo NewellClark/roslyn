@@ -15,7 +15,7 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis.Diagnostics
 {
-    internal partial class SuppressMessageAttributeState
+    internal sealed partial class SuppressMessageAttributeState
     {
         private const string s_suppressionPrefix = "~";
 

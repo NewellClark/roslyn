@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 
 namespace Microsoft.CodeAnalysis.Diagnostics
 {
-    internal partial class AnalyzerDriver<TLanguageKindEnum> : AnalyzerDriver where TLanguageKindEnum : struct
+    internal sealed partial class AnalyzerDriver<TLanguageKindEnum> : AnalyzerDriver where TLanguageKindEnum : struct
     {
         [StructLayout(LayoutKind.Auto)]
         private struct ExecutableCodeBlockAnalyzerActions

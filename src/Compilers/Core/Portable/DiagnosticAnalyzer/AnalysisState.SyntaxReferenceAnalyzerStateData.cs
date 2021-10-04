@@ -12,7 +12,7 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis.Diagnostics
 {
-    internal partial class AnalysisState
+    internal sealed partial class AnalysisState
     {
         /// <summary>
         /// Stores the partial analysis state for a specific symbol declaration for a specific analyzer.
@@ -90,7 +90,7 @@ namespace Microsoft.CodeAnalysis.Diagnostics
         /// <summary>
         /// Stores the partial analysis state for operation actions executed on the declaration.
         /// </summary>
-        internal class OperationAnalyzerStateData : AnalyzerStateData
+        internal sealed class OperationAnalyzerStateData : AnalyzerStateData
         {
             public HashSet<IOperation> ProcessedOperations { get; }
             public IOperation CurrentOperation { get; set; }

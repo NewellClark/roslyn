@@ -16,7 +16,7 @@ namespace Microsoft.CodeAnalysis
     /// answering questions like "do you have a type called Goo" in either a case sensitive or
     /// insensitive manner.
     /// </summary>
-    internal partial class IdentifierCollection
+    internal sealed partial class IdentifierCollection
     {
         // Maps an identifier to all spellings of that identifier in this module.  The value type is
         // typed as object so that it can store either an individual element (the common case), or a 

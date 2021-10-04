@@ -10,7 +10,7 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis.Diagnostics
 {
-    internal partial class AnalyzerDriver<TLanguageKindEnum> : AnalyzerDriver where TLanguageKindEnum : struct
+    internal sealed partial class AnalyzerDriver<TLanguageKindEnum> : AnalyzerDriver where TLanguageKindEnum : struct
     {
         /// <summary>
         /// <see cref="AnalyzerActions"/> grouped by <see cref="DiagnosticAnalyzer"/>, and possibly other entities, such as <see cref="OperationKind"/>, <see cref="SymbolKind"/>, etc.

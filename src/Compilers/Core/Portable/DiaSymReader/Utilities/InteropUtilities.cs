@@ -15,7 +15,7 @@ namespace Microsoft.DiaSymReader
         public static readonly T[] Instance = new T[0];
     }
 
-    internal class InteropUtilities
+    internal sealed class InteropUtilities
     {
         private static readonly IntPtr s_ignoreIErrorInfo = new IntPtr(-1);
 

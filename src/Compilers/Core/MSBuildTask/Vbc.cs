@@ -1134,7 +1134,7 @@ namespace Microsoft.CodeAnalysis.BuildTasks
         /// <summary>
         /// private class that just holds together name, value pair for the vbErrorLines Queue
         /// </summary>
-        private class VBError
+        private sealed class VBError
         {
             public string Message { get; }
             public MessageImportance MessageImportance { get; }

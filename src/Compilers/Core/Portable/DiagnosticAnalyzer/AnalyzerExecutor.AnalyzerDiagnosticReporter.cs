@@ -11,7 +11,7 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis.Diagnostics
 {
-    internal partial class AnalyzerExecutor
+    internal sealed partial class AnalyzerExecutor
     {
         /// <summary>
         /// Pooled object that carries the info needed to process

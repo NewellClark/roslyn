@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Microsoft.CodeAnalysis.Rebuild
 {
-    internal class MetadataCompilationOptions
+    internal sealed class MetadataCompilationOptions
     {
         private readonly ImmutableArray<(string optionName, string value)> _options;
 

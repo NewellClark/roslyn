@@ -28,7 +28,7 @@ namespace Microsoft.CodeAnalysis.CodeGen
     /// 3) Convert each byte in the file content into two bytes containing hexadecimal characters (see method <see cref="ConvertToHex"/>).
     /// 4) Replacing the 'File = fileName' named argument with 'Hex = hexFileContent' argument, where hexFileContent is the converted output from step 3) above.
     /// </remarks>
-    internal class PermissionSetAttributeWithFileReference : Cci.ICustomAttribute
+    internal sealed class PermissionSetAttributeWithFileReference : Cci.ICustomAttribute
     {
         private readonly Cci.ICustomAttribute _sourceAttribute;
         private readonly string _resolvedPermissionSetFilePath;
@@ -187,7 +187,7 @@ namespace Microsoft.CodeAnalysis.CodeGen
     /// <summary>
     /// Exception class to enable generating ERR_PermissionSetAttributeFileReadError while reading the file for PermissionSetAttribute fixup.
     /// </summary>
-    internal class PermissionSetFileReadException : Exception
+    internal sealed class PermissionSetFileReadException : Exception
     {
         private readonly string _file;
 

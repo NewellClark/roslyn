@@ -408,7 +408,7 @@ namespace Microsoft.CodeAnalysis.Diagnostics
                 }
             }
 
-            private class ExtTypeComparer : IEqualityComparer<TExtension>
+            private sealed class ExtTypeComparer : IEqualityComparer<TExtension>
             {
                 public static readonly ExtTypeComparer Instance = new();
 

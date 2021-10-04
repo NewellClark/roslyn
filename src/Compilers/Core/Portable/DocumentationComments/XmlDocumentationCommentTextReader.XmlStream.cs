@@ -12,7 +12,7 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis
 {
-    internal partial class XmlDocumentationCommentTextReader
+    internal sealed partial class XmlDocumentationCommentTextReader
     {
         internal sealed class Reader : TextReader
         {

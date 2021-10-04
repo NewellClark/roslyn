@@ -10,7 +10,7 @@ using System.Runtime.CompilerServices;
 
 namespace Microsoft.CodeAnalysis.Diagnostics
 {
-    internal class AnalysisValueProvider<TKey, TValue>
+    internal sealed class AnalysisValueProvider<TKey, TValue>
         where TKey : class
     {
         private readonly Func<TKey, TValue> _computeValue;

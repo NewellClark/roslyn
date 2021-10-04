@@ -125,7 +125,7 @@ namespace Microsoft.CodeAnalysis
     //      keyValueEquality    is an object == for the new and old keys 
     //                          NOTE: we do store the key in this case 
     //                          reference comparison of keys is as cheap as comparing hash codes.
-    internal class CachingIdentityFactory<TKey, TValue> : CachingBase<CachingIdentityFactory<TKey, TValue>.Entry>
+    internal sealed class CachingIdentityFactory<TKey, TValue> : CachingBase<CachingIdentityFactory<TKey, TValue>.Entry>
         where TKey : class
     {
         private readonly Func<TKey, TValue> _valueFactory;

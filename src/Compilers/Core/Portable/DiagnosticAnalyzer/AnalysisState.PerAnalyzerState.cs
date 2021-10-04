@@ -15,7 +15,7 @@ namespace Microsoft.CodeAnalysis.Diagnostics
     /// <summary>
     /// Stores the current partial analysis state for an analyzer.
     /// </summary>
-    internal partial class AnalysisState
+    internal sealed partial class AnalysisState
     {
         private class PerAnalyzerState
         {

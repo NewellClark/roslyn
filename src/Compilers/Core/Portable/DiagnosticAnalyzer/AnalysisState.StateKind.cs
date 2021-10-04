@@ -6,7 +6,7 @@
 
 namespace Microsoft.CodeAnalysis.Diagnostics
 {
-    internal partial class AnalysisState
+    internal sealed partial class AnalysisState
     {
         /// <summary>
         /// State kind of per-analyzer <see cref="AnalyzerStateData"/> tracking an analyzer's partial analysis state.

@@ -11,7 +11,7 @@ namespace Microsoft.CodeAnalysis.Diagnostics
 {
     internal abstract partial class AnalyzerDriver : IDisposable
     {
-        internal class CompilationData
+        internal sealed class CompilationData
         {
             private readonly Dictionary<SyntaxReference, DeclarationAnalysisData> _declarationAnalysisDataMap;
 

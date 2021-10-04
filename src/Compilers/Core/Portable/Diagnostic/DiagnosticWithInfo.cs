@@ -15,7 +15,7 @@ namespace Microsoft.CodeAnalysis
     /// A diagnostic (such as a compiler error or a warning), along with the location where it occurred.
     /// </summary>
     [DebuggerDisplay("{GetDebuggerDisplay(), nq}")]
-    internal class DiagnosticWithInfo : Diagnostic
+    internal sealed class DiagnosticWithInfo : Diagnostic
     {
         private readonly DiagnosticInfo _info;
         private readonly Location _location;

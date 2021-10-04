@@ -56,7 +56,7 @@ namespace Microsoft.CodeAnalysis.CodeGen
     /// Every compiled module is supposed to have one of this, created lazily 
     /// (multidimensional arrays are not common).
     /// </summary>
-    internal class ArrayMethods
+    internal sealed class ArrayMethods
     {
         // There are four kinds of array pseudo-methods
         // They are specific to a given array type

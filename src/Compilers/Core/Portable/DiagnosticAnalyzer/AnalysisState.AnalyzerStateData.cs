@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace Microsoft.CodeAnalysis.Diagnostics
 {
-    internal partial class AnalysisState
+    internal sealed partial class AnalysisState
     {
         /// <summary>
         /// Stores the partial analysis state for a specific event/symbol/tree for a specific analyzer.

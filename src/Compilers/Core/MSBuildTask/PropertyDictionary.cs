@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Microsoft.CodeAnalysis.BuildTasks
 {
-    internal class PropertyDictionary : Dictionary<string, object?>
+    internal sealed class PropertyDictionary : Dictionary<string, object?>
     {
         public T GetOrDefault<T>(string name, T @default)
         {

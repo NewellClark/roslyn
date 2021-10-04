@@ -16,13 +16,13 @@ namespace Microsoft.CodeAnalysis
 {
     // very simple cache with a specified size.
     // expiration policy is "new entry wins over old entry if hashed into the same bucket"
-    internal class ConcurrentCache<TKey, TValue> : CachingBase<ConcurrentCache<TKey, TValue>.Entry>
+    internal sealed class ConcurrentCache<TKey, TValue> : CachingBase<ConcurrentCache<TKey, TValue>.Entry>
         where TKey : notnull
     {
         private readonly IEqualityComparer<TKey> _keyComparer;
 
         // class, to ensure atomic updates.
-        internal class Entry
+        internal sealed class Entry
         {
             internal readonly int hash;
             internal readonly TKey key;

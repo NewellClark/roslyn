@@ -11,7 +11,7 @@ using DWORD = System.UInt32;
 
 namespace Microsoft.CodeAnalysis.CodeGen
 {
-    internal class Win32Resource : Cci.IWin32Resource
+    internal sealed class Win32Resource : Cci.IWin32Resource
     {
         private readonly byte[] _data;
         private readonly DWORD _codePage;
