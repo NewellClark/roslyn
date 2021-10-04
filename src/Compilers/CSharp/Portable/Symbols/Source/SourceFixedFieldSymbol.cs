@@ -17,7 +17,7 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis.CSharp.Symbols
 {
-    internal class SourceFixedFieldSymbol : SourceMemberFieldSymbolFromDeclarator
+    internal sealed class SourceFixedFieldSymbol : SourceMemberFieldSymbolFromDeclarator
     {
         private const int FixedSizeNotInitialized = -1;
 

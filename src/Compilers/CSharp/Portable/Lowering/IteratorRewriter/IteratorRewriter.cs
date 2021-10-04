@@ -92,7 +92,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         /// <returns>
         /// Returns true if all types and members we need are present and good
         /// </returns>
-        protected bool VerifyPresenceOfRequiredAPIs()
+        private bool VerifyPresenceOfRequiredAPIs()
         {
             var bag = BindingDiagnosticBag.GetInstance(withDiagnostics: true, diagnostics.AccumulatesDependencies);
 

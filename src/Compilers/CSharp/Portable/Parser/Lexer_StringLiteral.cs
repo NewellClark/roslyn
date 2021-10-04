@@ -7,7 +7,7 @@ using Microsoft.CodeAnalysis.PooledObjects;
 
 namespace Microsoft.CodeAnalysis.CSharp.Syntax.InternalSyntax
 {
-    internal partial class Lexer
+    internal sealed partial class Lexer
     {
         private void ScanStringLiteral(ref TokenInfo info, bool inDirective)
         {
@@ -268,7 +268,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Syntax.InternalSyntax
                 interpolatedString.GetLastToken().GetTrailingTrivia());
         }
 
-        private class InterpolatedStringScanner
+        private sealed class InterpolatedStringScanner
         {
             private readonly Lexer _lexer;
             private bool _isVerbatim;

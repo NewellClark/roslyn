@@ -1109,7 +1109,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Symbols
             }
         }
 
-        private class NameCollisionForAddedModulesTypeComparer : IComparer<NamedTypeSymbol>
+        private sealed class NameCollisionForAddedModulesTypeComparer : IComparer<NamedTypeSymbol>
         {
             public static readonly NameCollisionForAddedModulesTypeComparer Singleton = new NameCollisionForAddedModulesTypeComparer();
 

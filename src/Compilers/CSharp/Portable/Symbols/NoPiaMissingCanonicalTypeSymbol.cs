@@ -17,7 +17,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Symbols
     /// embedded type symbol that was attempted to be substituted with canonical type, but the
     /// canonical type couldn't be found.
     /// </summary>
-    internal class NoPiaMissingCanonicalTypeSymbol : ErrorTypeSymbol
+    internal sealed class NoPiaMissingCanonicalTypeSymbol : ErrorTypeSymbol
     // TODO: Should probably inherit from MissingMetadataType.TopLevel, but review TypeOf checks for MissingMetadataType.
     {
         private readonly AssemblySymbol _embeddingAssembly;

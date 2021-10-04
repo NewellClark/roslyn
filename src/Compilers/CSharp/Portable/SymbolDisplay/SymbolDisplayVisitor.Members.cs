@@ -15,7 +15,7 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis.CSharp
 {
-    internal partial class SymbolDisplayVisitor
+    internal sealed partial class SymbolDisplayVisitor
     {
         private const string IL_KEYWORD_MODOPT = "modopt";
         private const string IL_KEYWORD_MODREQ = "modreq";

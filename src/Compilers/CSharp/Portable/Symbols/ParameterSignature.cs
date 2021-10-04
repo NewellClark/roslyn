@@ -13,7 +13,7 @@ using Microsoft.CodeAnalysis.Text;
 
 namespace Microsoft.CodeAnalysis.CSharp.Symbols
 {
-    internal class ParameterSignature
+    internal sealed class ParameterSignature
     {
         internal readonly ImmutableArray<TypeWithAnnotations> parameterTypesWithAnnotations;
         internal readonly ImmutableArray<RefKind> parameterRefKinds;

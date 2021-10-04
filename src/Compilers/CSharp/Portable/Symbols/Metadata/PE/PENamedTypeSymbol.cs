@@ -123,7 +123,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Symbols.Metadata.PE
             return false;
         }
 
-        private class UncommonProperties
+        private sealed class UncommonProperties
         {
             /// <summary>
             /// Need to import them for an enum from a linked assembly, when we are embedding it. These symbols are not included into lazyMembersInDeclarationOrder.  
@@ -1103,7 +1103,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Symbols.Metadata.PE
             return this.GetMembers(name);
         }
 
-        private class DeclarationOrderTypeSymbolComparer : IComparer<Symbol>
+        private sealed class DeclarationOrderTypeSymbolComparer : IComparer<Symbol>
         {
             public static readonly DeclarationOrderTypeSymbolComparer Instance = new DeclarationOrderTypeSymbolComparer();
 

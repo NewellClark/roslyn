@@ -28,7 +28,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Symbols.Metadata.PE
         /// <summary>
         /// internal for testing purpose
         /// </summary>
-        internal class SignatureData
+        internal sealed class SignatureData
         {
             public readonly SignatureHeader Header;
             public readonly ImmutableArray<ParameterSymbol> Parameters;

@@ -980,7 +980,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Symbols.Retargeting
                 return RetargetedTypeMethodFinder.Find(this, method, retargetedType, retargetedMethodComparer);
             }
 
-            private class RetargetedTypeMethodFinder : RetargetingSymbolTranslator
+            private sealed class RetargetedTypeMethodFinder : RetargetingSymbolTranslator
             {
                 private readonly NamedTypeSymbol _retargetedType;
                 private readonly MethodSymbol _toFind;

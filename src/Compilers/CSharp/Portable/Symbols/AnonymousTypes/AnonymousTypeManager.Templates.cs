@@ -390,7 +390,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Symbols
             }
         }
 
-        private class SynthesizedDelegateSymbolComparer : IComparer<SynthesizedDelegateSymbol>
+        private sealed class SynthesizedDelegateSymbolComparer : IComparer<SynthesizedDelegateSymbol>
         {
             public static readonly SynthesizedDelegateSymbolComparer Instance = new SynthesizedDelegateSymbolComparer();
 

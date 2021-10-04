@@ -16,7 +16,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// An analysis that computes the set of variables that may be used
     /// before being assigned anywhere within a method.
     /// </summary>
-    internal class UnassignedVariablesWalker : DefiniteAssignmentPass
+    internal sealed class UnassignedVariablesWalker : DefiniteAssignmentPass
     {
         private UnassignedVariablesWalker(CSharpCompilation compilation, Symbol member, BoundNode node)
             : base(compilation, member, node, EmptyStructTypeCache.CreateNeverEmpty())

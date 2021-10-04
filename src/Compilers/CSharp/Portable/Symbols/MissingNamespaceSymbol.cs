@@ -18,7 +18,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Symbols
     /// A <see cref="MissingNamespaceSymbol"/> is a special kind of <see cref="NamespaceSymbol"/> that represents
     /// a namespace that couldn't be found.
     /// </summary>
-    internal class MissingNamespaceSymbol : NamespaceSymbol
+    internal sealed class MissingNamespaceSymbol : NamespaceSymbol
     {
         private readonly string _name;
         private readonly Symbol _containingSymbol;

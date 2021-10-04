@@ -15,7 +15,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Syntax.InternalSyntax
     /// Read-only outside SyntaxParser (not enforced for perf reasons).
     /// Reference type so that the factory stays up-to-date.
     /// </remarks>
-    internal class SyntaxFactoryContext
+    internal sealed class SyntaxFactoryContext
     {
         /// <summary>
         /// If a method goes from async to non-async, or vice versa, then every occurrence of "await"

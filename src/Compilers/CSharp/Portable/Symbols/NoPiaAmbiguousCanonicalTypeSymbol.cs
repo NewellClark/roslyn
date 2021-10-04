@@ -17,7 +17,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Symbols
     /// embedded type symbol that was attempted to be substituted with canonical type, but the
     /// canonical type was ambiguous.
     /// </summary>
-    internal class NoPiaAmbiguousCanonicalTypeSymbol : ErrorTypeSymbol
+    internal sealed class NoPiaAmbiguousCanonicalTypeSymbol : ErrorTypeSymbol
     {
         private readonly AssemblySymbol _embeddingAssembly;
         private readonly NamedTypeSymbol _firstCandidate;

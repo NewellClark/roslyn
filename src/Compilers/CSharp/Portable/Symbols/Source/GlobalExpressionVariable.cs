@@ -156,7 +156,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Symbols
             throw ExceptionUtilities.Unreachable;
         }
 
-        private class InferrableGlobalExpressionVariable : GlobalExpressionVariable
+        private sealed class InferrableGlobalExpressionVariable : GlobalExpressionVariable
         {
             private readonly FieldSymbol _containingFieldOpt;
             private readonly SyntaxReference _nodeToBind;
