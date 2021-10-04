@@ -20,7 +20,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// <summary>
     /// Traverses the symbol table checking for CLS compliance.
     /// </summary>
-    internal partial class ClsComplianceChecker : CSharpSymbolVisitor
+    internal sealed partial class ClsComplianceChecker : CSharpSymbolVisitor
     {
         private readonly CSharpCompilation _compilation;
         private readonly SyntaxTree _filterTree; //if not null, limit analysis to types residing in this tree

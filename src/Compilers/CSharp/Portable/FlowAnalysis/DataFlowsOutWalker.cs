@@ -20,7 +20,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// treats assignments in the region as unassigning the variable would
     /// cause "unassigned" errors outside the region.
     /// </summary>
-    internal class DataFlowsOutWalker : AbstractRegionDataFlowPass
+    internal sealed class DataFlowsOutWalker : AbstractRegionDataFlowPass
     {
         private readonly ImmutableArray<ISymbol> _dataFlowsIn;
 

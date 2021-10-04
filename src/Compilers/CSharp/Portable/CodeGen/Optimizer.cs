@@ -19,7 +19,7 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis.CSharp.CodeGen
 {
-    internal class Optimizer
+    internal sealed class Optimizer
     {
         /// <summary>
         /// Perform IL specific optimizations (mostly reduction of local slots)
@@ -234,7 +234,7 @@ namespace Microsoft.CodeAnalysis.CSharp.CodeGen
     //      a write or a subsequent read. These cases are not ambiguous because 
     //      when rewriting, definition will match to a single node and 
     //      we always know if given node is reading or writing.
-    internal class LocalDefUseInfo
+    internal sealed class LocalDefUseInfo
     {
         // stack at variable declaration, may be > 0 in sequences.
         public int StackAtDeclaration { get; private set; }

@@ -160,7 +160,7 @@ namespace Microsoft.CodeAnalysis.CSharp
             return null;
         }
 
-        public class CancelledByStackGuardException : Exception
+        public sealed class CancelledByStackGuardException : Exception
         {
             public readonly BoundNode Node;
 

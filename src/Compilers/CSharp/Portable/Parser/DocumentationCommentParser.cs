@@ -32,7 +32,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Syntax.InternalSyntax
     // trying to understand them, e.g. like comments or CDATA, so that they are available
     // to whoever processes these comments and do not produce an error. 
 
-    internal class DocumentationCommentParser : SyntaxParser
+    internal sealed class DocumentationCommentParser : SyntaxParser
     {
         private readonly SyntaxListPool _pool = new SyntaxListPool();
         private bool _isDelimited;

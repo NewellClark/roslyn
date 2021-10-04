@@ -13,7 +13,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// <summary>
     /// An analysis that computes all cases where the address is taken of a variable that has not yet been assigned
     /// </summary>
-    internal class UnassignedAddressTakenVariablesWalker : DefiniteAssignmentPass
+    internal sealed class UnassignedAddressTakenVariablesWalker : DefiniteAssignmentPass
     {
         private UnassignedAddressTakenVariablesWalker(CSharpCompilation compilation, Symbol member, BoundNode node)
             : base(compilation, member, node, strictAnalysis: true)

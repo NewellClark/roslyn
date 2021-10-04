@@ -15,7 +15,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// <summary>
     /// A region analysis walker that records reads and writes of all variables, both inside and outside the region.
     /// </summary>
-    internal class ReadWriteWalker : AbstractRegionDataFlowPass
+    internal sealed class ReadWriteWalker : AbstractRegionDataFlowPass
     {
         internal static void Analyze(
             CSharpCompilation compilation, Symbol member, BoundNode node, BoundNode firstInRegion, BoundNode lastInRegion, HashSet<PrefixUnaryExpressionSyntax> unassignedVariableAddressOfSyntaxes,

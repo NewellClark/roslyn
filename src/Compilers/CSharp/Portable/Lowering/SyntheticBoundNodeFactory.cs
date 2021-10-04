@@ -29,7 +29,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         /// the only diagnostic handled through this mechanism is a missing special/well-known
         /// member.
         /// </summary>
-        public class MissingPredefinedMember : Exception
+        public sealed class MissingPredefinedMember : Exception
         {
             public MissingPredefinedMember(Diagnostic error) : base(error.ToString())
             {
@@ -929,7 +929,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         /// <summary>
         /// An internal helper class for building a switch statement.
         /// </summary>
-        internal class SyntheticSwitchSection
+        internal sealed class SyntheticSwitchSection
         {
             public readonly ImmutableArray<int> Values;
             public readonly ImmutableArray<BoundStatement> Statements;

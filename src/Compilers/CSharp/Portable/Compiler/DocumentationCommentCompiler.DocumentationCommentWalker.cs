@@ -17,13 +17,13 @@ namespace Microsoft.CodeAnalysis.CSharp
 {
     // Traverses the symbol table processing XML documentation comments and optionally writing them to
     // a provided stream.
-    internal partial class DocumentationCommentCompiler : CSharpSymbolVisitor
+    internal sealed partial class DocumentationCommentCompiler : CSharpSymbolVisitor
     {
         /// <summary>
         /// Walks a DocumentationCommentTriviaSyntax, binding the semantically meaningful parts 
         /// to produce diagnostics and to replace source crefs with documentation comment IDs.
         /// </summary>
-        private class DocumentationCommentWalker : CSharpSyntaxWalker
+        private sealed class DocumentationCommentWalker : CSharpSyntaxWalker
         {
             private readonly CSharpCompilation _compilation;
             private readonly BindingDiagnosticBag _diagnostics;

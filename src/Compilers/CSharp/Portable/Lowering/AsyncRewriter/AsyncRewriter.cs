@@ -275,7 +275,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         /// <summary>
         /// Note: do not use a static/singleton instance of this type, as it holds state.
         /// </summary>
-        private class AwaitDetector : BoundTreeWalkerWithStackGuardWithoutRecursionOnTheLeftOfBinaryOperator
+        private sealed class AwaitDetector : BoundTreeWalkerWithStackGuardWithoutRecursionOnTheLeftOfBinaryOperator
         {
             private bool _sawAwait;
 

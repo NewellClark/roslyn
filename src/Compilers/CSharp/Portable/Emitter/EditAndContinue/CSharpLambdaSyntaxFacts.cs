@@ -6,7 +6,7 @@ using Microsoft.CodeAnalysis.Emit;
 
 namespace Microsoft.CodeAnalysis.CSharp.Emit
 {
-    internal class CSharpLambdaSyntaxFacts : LambdaSyntaxFacts
+    internal sealed class CSharpLambdaSyntaxFacts : LambdaSyntaxFacts
     {
         public static readonly LambdaSyntaxFacts Instance = new CSharpLambdaSyntaxFacts();
 

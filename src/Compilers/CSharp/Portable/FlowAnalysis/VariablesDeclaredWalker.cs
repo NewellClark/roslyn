@@ -17,7 +17,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// <summary>
     /// A region analysis walker that records declared variables.
     /// </summary>
-    internal class VariablesDeclaredWalker : AbstractRegionControlFlowPass
+    internal sealed class VariablesDeclaredWalker : AbstractRegionControlFlowPass
     {
         internal static IEnumerable<Symbol> Analyze(CSharpCompilation compilation, Symbol member, BoundNode node, BoundNode firstInRegion, BoundNode lastInRegion)
         {

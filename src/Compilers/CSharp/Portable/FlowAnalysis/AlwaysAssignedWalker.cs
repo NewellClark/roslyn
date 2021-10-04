@@ -19,7 +19,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// in the region. A variable is "always assigned" in a region if an analysis of the region that
     /// starts with the variable unassigned ends with the variable assigned.
     /// </summary>
-    internal class AlwaysAssignedWalker : AbstractRegionDataFlowPass
+    internal sealed class AlwaysAssignedWalker : AbstractRegionDataFlowPass
     {
         private LocalState _endOfRegionState;
         private readonly HashSet<LabelSymbol> _labelsInside = new HashSet<LabelSymbol>();

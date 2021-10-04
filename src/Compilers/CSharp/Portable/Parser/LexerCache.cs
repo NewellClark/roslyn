@@ -16,7 +16,7 @@ using System.Text;
 
 namespace Microsoft.CodeAnalysis.CSharp.Syntax.InternalSyntax
 {
-    internal partial class LexerCache
+    internal sealed partial class LexerCache
     {
         private static readonly ObjectPool<CachingIdentityFactory<string, SyntaxKind>> s_keywordKindPool =
             CachingIdentityFactory<string, SyntaxKind>.CreatePool(

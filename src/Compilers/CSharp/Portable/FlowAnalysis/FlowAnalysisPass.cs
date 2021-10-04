@@ -13,7 +13,7 @@ using Microsoft.CodeAnalysis.PooledObjects;
 
 namespace Microsoft.CodeAnalysis.CSharp
 {
-    internal class FlowAnalysisPass
+    internal sealed class FlowAnalysisPass
     {
         /// <summary>
         /// The flow analysis pass.  This pass reports required diagnostics for unreachable

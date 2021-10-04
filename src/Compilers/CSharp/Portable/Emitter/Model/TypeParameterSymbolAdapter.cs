@@ -15,7 +15,7 @@ using System.Collections.Immutable;
 
 namespace Microsoft.CodeAnalysis.CSharp.Symbols
 {
-    internal partial class
+    internal sealed partial class
 #if DEBUG
         TypeParameterSymbolAdapter : SymbolAdapter,
 #else

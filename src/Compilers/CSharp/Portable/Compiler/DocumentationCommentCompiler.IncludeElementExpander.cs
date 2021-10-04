@@ -23,9 +23,9 @@ namespace Microsoft.CodeAnalysis.CSharp
 {
     // Traverses the symbol table processing XML documentation comments and optionally writing them to
     // a provided stream.
-    internal partial class DocumentationCommentCompiler : CSharpSymbolVisitor
+    internal sealed partial class DocumentationCommentCompiler : CSharpSymbolVisitor
     {
-        private class IncludeElementExpander
+        private sealed class IncludeElementExpander
         {
             private readonly Symbol _memberSymbol;
             private readonly ImmutableArray<CSharpSyntaxNode> _sourceIncludeElementNodes;

@@ -13,7 +13,7 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis.CSharp.Symbols
 {
-    internal partial class
+    internal sealed partial class
 #if DEBUG
         FieldSymbolAdapter : SymbolAdapter,
 #else

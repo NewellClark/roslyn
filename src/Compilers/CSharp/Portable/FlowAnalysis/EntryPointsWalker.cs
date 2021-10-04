@@ -18,7 +18,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// A region analysis walker that records jumps into the region.  Works by overriding NoteBranch, which is
     /// invoked by a superclass when the two endpoints of a jump have been identified.
     /// </summary>
-    internal class EntryPointsWalker : AbstractRegionControlFlowPass
+    internal sealed class EntryPointsWalker : AbstractRegionControlFlowPass
     {
         internal static IEnumerable<LabeledStatementSyntax> Analyze(CSharpCompilation compilation, Symbol member, BoundNode node, BoundNode firstInRegion, BoundNode lastInRegion, out bool? succeeded)
         {

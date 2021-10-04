@@ -267,7 +267,7 @@ namespace Microsoft.CodeAnalysis.CSharp
             /// have been converted to <see cref="BoundLabelStatement"/>s, so we do not have to 
             /// visit them.
             /// </summary>
-            private class ScopeTreeBuilder : BoundTreeWalkerWithStackGuardWithoutRecursionOnTheLeftOfBinaryOperator
+            private sealed class ScopeTreeBuilder : BoundTreeWalkerWithStackGuardWithoutRecursionOnTheLeftOfBinaryOperator
             {
                 /// <summary>
                 /// Do not set this directly, except when setting the root scope. 

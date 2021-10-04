@@ -390,7 +390,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         /// pending branches to a label in that block we process the branch.  Otherwise we relay it
         /// up to the enclosing construct as a pending branch of the enclosing construct.
         /// </summary>
-        internal class PendingBranch
+        internal sealed class PendingBranch
         {
             public readonly BoundNode Branch;
             public bool IsConditionalState;

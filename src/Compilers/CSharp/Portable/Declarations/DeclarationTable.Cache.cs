@@ -20,7 +20,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         // and keep that around as long as they do not change.  For example, we keep a single 'merged
         // declaration' for all those root declarations as well as sets of interesting information
         // (like the type names in those decls). 
-        private class Cache
+        private sealed class Cache
         {
             // The merged root declaration for all the 'old' declarations.
             internal readonly Lazy<MergedNamespaceDeclaration> MergedRoot;

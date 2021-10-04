@@ -17,7 +17,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// the root of the chain in order to ensure sound debugging experience for the instrumented code.
     /// In other words, sequence points are typically applied after all other changes.
     /// </summary>
-    internal partial class DebugInfoInjector : CompoundInstrumenter
+    internal sealed partial class DebugInfoInjector : CompoundInstrumenter
     {
         /// <summary>
         /// A singleton object that performs only one type of instrumentation - addition of debugging sequence points. 

@@ -18,7 +18,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// variable unassigned on entry to the region would cause the generation of "unassigned" errors
     /// within the region.
     /// </summary>
-    internal class DataFlowsInWalker : AbstractRegionDataFlowPass
+    internal sealed class DataFlowsInWalker : AbstractRegionDataFlowPass
     {
         // TODO: normalize the result by removing variables that are unassigned in an unmodified
         // flow analysis.

@@ -12,7 +12,7 @@ namespace Microsoft.CodeAnalysis.CSharp.Syntax.InternalSyntax
 {
     using Microsoft.CodeAnalysis.Syntax.InternalSyntax;
 
-    internal class DirectiveParser : SyntaxParser
+    internal sealed class DirectiveParser : SyntaxParser
     {
         private const int MAX_DIRECTIVE_IDENTIFIER_WIDTH = 128;
 

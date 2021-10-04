@@ -14,7 +14,7 @@ using Microsoft.CodeAnalysis.PooledObjects;
 
 namespace Microsoft.CodeAnalysis.CSharp.Syntax.InternalSyntax
 {
-    internal partial class LanguageParser
+    internal sealed partial class LanguageParser
     {
         /// <summary>
         /// "Safe" substring using start and end positions rather than start and length.

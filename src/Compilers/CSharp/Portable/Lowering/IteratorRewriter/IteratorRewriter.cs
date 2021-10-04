@@ -15,7 +15,7 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis.CSharp
 {
-    internal partial class IteratorRewriter : StateMachineRewriter
+    internal sealed partial class IteratorRewriter : StateMachineRewriter
     {
         private readonly TypeWithAnnotations _elementType;
 

@@ -18,7 +18,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// <summary>
     /// A region analysis walker that records jumps out of the region.
     /// </summary>
-    internal class ExitPointsWalker : AbstractRegionControlFlowPass
+    internal sealed class ExitPointsWalker : AbstractRegionControlFlowPass
     {
         private readonly ArrayBuilder<LabelSymbol> _labelsInside;
         private ArrayBuilder<StatementSyntax> _branchesOutOf;

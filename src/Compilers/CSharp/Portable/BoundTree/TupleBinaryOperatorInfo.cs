@@ -42,7 +42,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         /// <summary>
         /// Holds the information for an element-wise comparison (like <c>a == b</c> as part of <c>(a, ...) == (b, ...)</c>)
         /// </summary>
-        internal class Single : TupleBinaryOperatorInfo
+        internal sealed class Single : TupleBinaryOperatorInfo
         {
             internal readonly BinaryOperatorKind Kind;
             internal readonly MethodSymbol? MethodSymbolOpt; // User-defined comparison operator, if applicable
@@ -93,7 +93,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         /// <summary>
         /// Holds the information for a tuple comparison, either at the top-level (like <c>(a, b) == ...</c>) or nested (like <c>(..., (a, b)) == (..., ...)</c>).
         /// </summary>
-        internal class Multiple : TupleBinaryOperatorInfo
+        internal sealed class Multiple : TupleBinaryOperatorInfo
         {
             internal readonly ImmutableArray<TupleBinaryOperatorInfo> Operators;
 
@@ -130,7 +130,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         /// Represents an element-wise null/null comparison.
         /// For instance, <c>(null, ...) == (null, ...)</c>.
         /// </summary>
-        internal class NullNull : TupleBinaryOperatorInfo
+        internal sealed class NullNull : TupleBinaryOperatorInfo
         {
             internal readonly BinaryOperatorKind Kind;
 

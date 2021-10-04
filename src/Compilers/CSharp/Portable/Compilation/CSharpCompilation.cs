@@ -2069,7 +2069,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         internal override bool IsUnreferencedAssemblyIdentityDiagnosticCode(int code)
             => code == (int)ErrorCode.ERR_NoTypeDef;
 
-        internal class EntryPoint
+        internal sealed class EntryPoint
         {
             public readonly MethodSymbol? MethodSymbol;
             public readonly ImmutableBindingDiagnostic<AssemblySymbol> Diagnostics;
@@ -4309,7 +4309,7 @@ namespace Microsoft.CodeAnalysis.CSharp
             }
         }
 
-        private class PredicateSymbolSearcher : AbstractSymbolSearcher
+        private sealed class PredicateSymbolSearcher : AbstractSymbolSearcher
         {
             private readonly Func<string, bool> _predicate;
 
@@ -4332,7 +4332,7 @@ namespace Microsoft.CodeAnalysis.CSharp
                 => _predicate(name);
         }
 
-        private class NameSymbolSearcher : AbstractSymbolSearcher
+        private sealed class NameSymbolSearcher : AbstractSymbolSearcher
         {
             private readonly string _name;
 

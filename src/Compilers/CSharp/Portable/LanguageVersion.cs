@@ -290,7 +290,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         }
     }
 
-    internal class CSharpRequiredLanguageVersion : RequiredLanguageVersion
+    internal sealed class CSharpRequiredLanguageVersion : RequiredLanguageVersion
     {
         internal LanguageVersion Version { get; }
 

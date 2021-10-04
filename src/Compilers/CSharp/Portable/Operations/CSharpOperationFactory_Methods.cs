@@ -398,7 +398,7 @@ namespace Microsoft.CodeAnalysis.Operations
             }
         }
 
-        internal class Helper
+        internal sealed class Helper
         {
             internal static bool IsPostfixIncrementOrDecrement(CSharp.UnaryOperatorKind operatorKind)
             {

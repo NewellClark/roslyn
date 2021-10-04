@@ -85,7 +85,7 @@ namespace Microsoft.CodeAnalysis.CSharp
             return false;
         }
 
-        private class ContainsAwaitVisitor : BoundTreeWalkerWithStackGuardWithoutRecursionOnTheLeftOfBinaryOperator
+        private sealed class ContainsAwaitVisitor : BoundTreeWalkerWithStackGuardWithoutRecursionOnTheLeftOfBinaryOperator
         {
             public bool ContainsAwait = false;
 

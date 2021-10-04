@@ -2407,7 +2407,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         }
 
 #if REFERENCE_STATE
-        internal class LocalState : ILocalDataFlowState
+        internal sealed class LocalState : ILocalDataFlowState
 #else
         internal struct LocalState : ILocalDataFlowState
 #endif

@@ -14,7 +14,7 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis.CSharp
 {
-    internal class ExpressionLambdaRewriter // this is like a bound tree rewriter, but only handles a small subset of node kinds
+    internal sealed class ExpressionLambdaRewriter // this is like a bound tree rewriter, but only handles a small subset of node kinds
     {
         private readonly SyntheticBoundNodeFactory _bound;
         private readonly TypeMap _typeMap;

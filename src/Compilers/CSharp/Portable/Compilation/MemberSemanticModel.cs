@@ -2372,7 +2372,7 @@ foundParent:;
         /// NOTE: any member overridden by this binder should follow the BuckStopsHereBinder pattern.
         /// Otherwise, a subsequent binder in the chain could suppress the caching behavior.
         /// </remarks>
-        internal class IncrementalBinder : Binder
+        internal sealed class IncrementalBinder : Binder
         {
             private readonly MemberSemanticModel _semanticModel;
 

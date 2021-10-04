@@ -16,7 +16,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// Allows asking semantic questions about a tree of syntax nodes that did not appear in the original source code.
     /// Typically, an instance is obtained by a call to SemanticModel.TryGetSpeculativeSemanticModel. 
     /// </summary>
-    internal class SpeculativeSyntaxTreeSemanticModel : SyntaxTreeSemanticModel
+    internal sealed class SpeculativeSyntaxTreeSemanticModel : SyntaxTreeSemanticModel
     {
         private readonly SyntaxTreeSemanticModel _parentSemanticModel;
         private readonly CSharpSyntaxNode _root;

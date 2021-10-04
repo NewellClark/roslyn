@@ -21,7 +21,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// one of the analysis results is used it computes that one result and caches it. Each result
     /// is computed using a custom algorithm.
     /// </summary>
-    internal class CSharpDataFlowAnalysis : DataFlowAnalysis
+    internal sealed class CSharpDataFlowAnalysis : DataFlowAnalysis
     {
         private readonly RegionAnalysisContext _context;
 

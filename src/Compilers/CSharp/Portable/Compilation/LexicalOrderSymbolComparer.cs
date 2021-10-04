@@ -15,7 +15,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// original definition symbols (explicitly or implicitly declared in source within the same compilation)
     /// in lexical order of their declarations. It will not work on anything that uses non-source locations.
     /// </summary>
-    internal class LexicalOrderSymbolComparer : IComparer<Symbol>
+    internal sealed class LexicalOrderSymbolComparer : IComparer<Symbol>
     {
         public static readonly LexicalOrderSymbolComparer Instance = new LexicalOrderSymbolComparer();
 

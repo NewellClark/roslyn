@@ -17,7 +17,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// Then, the first time one of the analysis results is used it computes that one result and
     /// caches it. Each result is computed using a custom algorithm.
     /// </summary>
-    internal class CSharpControlFlowAnalysis : ControlFlowAnalysis
+    internal sealed class CSharpControlFlowAnalysis : ControlFlowAnalysis
     {
         private readonly RegionAnalysisContext _context;
 

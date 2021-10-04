@@ -10,7 +10,7 @@ using Microsoft.CodeAnalysis.Text;
 
 namespace Microsoft.CodeAnalysis.CSharp
 {
-    internal class UnprocessedDocumentationCommentFinder : CSharpSyntaxWalker
+    internal sealed class UnprocessedDocumentationCommentFinder : CSharpSyntaxWalker
     {
         private readonly DiagnosticBag _diagnostics;
         private readonly CancellationToken _cancellationToken;

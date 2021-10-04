@@ -371,7 +371,7 @@ namespace Microsoft.CodeAnalysis.CSharp
             return assignmentTargets;
         }
 
-        private class DeconstructionSideEffects
+        private sealed class DeconstructionSideEffects
         {
             internal ArrayBuilder<BoundExpression> init = null!;
             internal ArrayBuilder<BoundExpression> deconstructions = null!;

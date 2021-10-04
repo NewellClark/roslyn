@@ -1529,7 +1529,7 @@ oneMoreTime:
         /// This allows creating an emittable clone of finally.
         /// It is safe to do because no branches can go in or out of the finally handler.
         /// </summary>
-        private class FinallyCloner : BoundTreeRewriterWithStackGuardWithoutRecursionOnTheLeftOfBinaryOperator
+        private sealed class FinallyCloner : BoundTreeRewriterWithStackGuardWithoutRecursionOnTheLeftOfBinaryOperator
         {
             private Dictionary<LabelSymbol, GeneratedLabelSymbol> _labelClones;
 

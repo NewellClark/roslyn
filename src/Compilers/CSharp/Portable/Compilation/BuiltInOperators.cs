@@ -18,7 +18,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// Internal cache of built-in operators.
     /// Cache is compilation-specific because it uses compilation-specific SpecialTypes.
     /// </summary>
-    internal class BuiltInOperators
+    internal sealed class BuiltInOperators
     {
         private readonly CSharpCompilation _compilation;
 

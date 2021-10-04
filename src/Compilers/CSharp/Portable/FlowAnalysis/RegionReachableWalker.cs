@@ -12,7 +12,7 @@ namespace Microsoft.CodeAnalysis.CSharp
     /// A region analysis walker that computes whether or not the region completes normally.  It does this by determining
     /// if the point at which the region ends is reachable.
     /// </summary>
-    internal class RegionReachableWalker : AbstractRegionControlFlowPass
+    internal sealed class RegionReachableWalker : AbstractRegionControlFlowPass
     {
         internal static void Analyze(CSharpCompilation compilation, Symbol member, BoundNode node, BoundNode firstInRegion, BoundNode lastInRegion,
             out bool startPointIsReachable, out bool endPointIsReachable)
