@@ -17,7 +17,7 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis.CSharp
 {
-    internal class CSharpDeclarationComputer : DeclarationComputer
+    internal sealed class CSharpDeclarationComputer : DeclarationComputer
     {
         public static void ComputeDeclarationsInSpan(
             SemanticModel model,

@@ -10,7 +10,7 @@ namespace Microsoft.CodeAnalysis.CSharp
 {
     internal partial class BoundBinaryOperator
     {
-        internal class UncommonData
+        internal sealed class UncommonData
         {
             public static UncommonData UnconvertedInterpolatedStringAddition(ConstantValue? constantValue) =>
                 new UncommonData(

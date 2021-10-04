@@ -1669,7 +1669,7 @@ namespace Microsoft.CodeAnalysis.CSharp
             return memberSymbol;
         }
 
-        private class ConsistentSymbolOrder : IComparer<Symbol>
+        private sealed class ConsistentSymbolOrder : IComparer<Symbol>
         {
             public static readonly ConsistentSymbolOrder Instance = new ConsistentSymbolOrder();
             public int Compare(Symbol fst, Symbol snd)

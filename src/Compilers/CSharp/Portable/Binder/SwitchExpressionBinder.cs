@@ -11,7 +11,7 @@ using Microsoft.CodeAnalysis.PooledObjects;
 
 namespace Microsoft.CodeAnalysis.CSharp
 {
-    internal class SwitchExpressionBinder : Binder
+    internal sealed class SwitchExpressionBinder : Binder
     {
         private readonly SwitchExpressionSyntax SwitchExpressionSyntax;
 

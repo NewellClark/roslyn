@@ -47,7 +47,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         ///   2) The open type is not used as a type argument or array/pointer/nullable
         ///        element type.
         /// </summary>
-        private class OpenTypeVisitor : CSharpSyntaxVisitor
+        private sealed class OpenTypeVisitor : CSharpSyntaxVisitor
         {
             private Dictionary<GenericNameSyntax, bool> _allowedMap;
             private bool _seenConstructed;

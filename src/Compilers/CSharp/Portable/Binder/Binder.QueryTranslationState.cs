@@ -14,7 +14,7 @@ namespace Microsoft.CodeAnalysis.CSharp
 {
     internal partial class Binder
     {
-        private class QueryTranslationState
+        private sealed class QueryTranslationState
         {
             // Represents the current translation state for a query.  Consider a query of the form
             // from ID in EXPR { clauses } SELECT ...

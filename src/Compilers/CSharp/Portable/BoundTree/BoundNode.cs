@@ -346,7 +346,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         }
 
 #if DEBUG
-        private class MyTreeDumper : TreeDumper
+        private sealed class MyTreeDumper : TreeDumper
         {
             private MyTreeDumper() : base() { }
 
@@ -386,7 +386,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         }
 
 #if DEBUG
-        private class LocalsScanner : BoundTreeWalkerWithStackGuardWithoutRecursionOnTheLeftOfBinaryOperator
+        private sealed class LocalsScanner : BoundTreeWalkerWithStackGuardWithoutRecursionOnTheLeftOfBinaryOperator
         {
             public readonly PooledHashSet<LocalSymbol> DeclaredLocals = PooledHashSet<LocalSymbol>.GetInstance();
 

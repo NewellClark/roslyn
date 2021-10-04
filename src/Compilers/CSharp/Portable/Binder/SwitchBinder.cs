@@ -16,9 +16,9 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis.CSharp
 {
-    internal partial class SwitchBinder : LocalScopeBinder
+    internal sealed partial class SwitchBinder : LocalScopeBinder
     {
-        protected readonly SwitchStatementSyntax SwitchSyntax;
+        private readonly SwitchStatementSyntax SwitchSyntax;
 
         private readonly GeneratedLabelSymbol _breakLabel;
         private BoundExpression _switchGoverningExpression;
@@ -31,10 +31,10 @@ namespace Microsoft.CodeAnalysis.CSharp
             _breakLabel = new GeneratedLabelSymbol("break");
         }
 
-        protected bool PatternsEnabled =>
+        private bool PatternsEnabled =>
             ((CSharpParseOptions)SwitchSyntax.SyntaxTree.Options)?.IsFeatureEnabled(MessageID.IDS_FeaturePatternMatching) != false;
 
-        protected BoundExpression SwitchGoverningExpression
+        private BoundExpression SwitchGoverningExpression
         {
             get
             {
@@ -44,11 +44,11 @@ namespace Microsoft.CodeAnalysis.CSharp
             }
         }
 
-        protected TypeSymbol SwitchGoverningType => SwitchGoverningExpression.Type;
+        private TypeSymbol SwitchGoverningType => SwitchGoverningExpression.Type;
 
-        protected uint SwitchGoverningValEscape => GetValEscape(SwitchGoverningExpression, LocalScopeDepth);
+        private uint SwitchGoverningValEscape => GetValEscape(SwitchGoverningExpression, LocalScopeDepth);
 
-        protected BindingDiagnosticBag SwitchGoverningDiagnostics
+        private BindingDiagnosticBag SwitchGoverningDiagnostics
         {
             get
             {
@@ -235,7 +235,7 @@ namespace Microsoft.CodeAnalysis.CSharp
             }
         }
 
-        protected BoundExpression ConvertCaseExpression(CSharpSyntaxNode node, BoundExpression caseExpression, Binder sectionBinder, out ConstantValue constantValueOpt, BindingDiagnosticBag diagnostics, bool isGotoCaseExpr = false)
+        private BoundExpression ConvertCaseExpression(CSharpSyntaxNode node, BoundExpression caseExpression, Binder sectionBinder, out ConstantValue constantValueOpt, BindingDiagnosticBag diagnostics, bool isGotoCaseExpr = false)
         {
             bool hasErrors = false;
             if (isGotoCaseExpr)
@@ -272,13 +272,13 @@ namespace Microsoft.CodeAnalysis.CSharp
         }
 
         private static readonly object s_nullKey = new object();
-        protected static object KeyForConstant(ConstantValue constantValue)
+        private static object KeyForConstant(ConstantValue constantValue)
         {
             Debug.Assert((object)constantValue != null);
             return constantValue.IsNull ? s_nullKey : constantValue.Value;
         }
 
-        protected SourceLabelSymbol FindMatchingSwitchCaseLabel(ConstantValue constantValue, CSharpSyntaxNode labelSyntax)
+        private SourceLabelSymbol FindMatchingSwitchCaseLabel(ConstantValue constantValue, CSharpSyntaxNode labelSyntax)
         {
             // SwitchLabelsMap: Dictionary for the switch case/default labels.
             // Case labels with a non-null constant value are indexed on their ConstantValue.
@@ -445,7 +445,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         }
 
         private Dictionary<SyntaxNode, LabelSymbol> _labelsByNode;
-        protected Dictionary<SyntaxNode, LabelSymbol> LabelsByNode
+        private Dictionary<SyntaxNode, LabelSymbol> LabelsByNode
         {
             get
             {

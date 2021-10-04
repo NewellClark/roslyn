@@ -71,7 +71,7 @@ namespace Microsoft.CodeAnalysis.CSharp
             }
         }
 
-        private class DeconstructionUncommonData : UncommonData
+        private sealed class DeconstructionUncommonData : UncommonData
         {
             internal DeconstructionUncommonData(DeconstructMethodInfo deconstructMethodInfoOpt, ImmutableArray<Conversion> nestedConversions)
                 : base(isExtensionMethod: false, isArrayIndex: false, conversionResult: default, conversionMethod: null, nestedConversions)

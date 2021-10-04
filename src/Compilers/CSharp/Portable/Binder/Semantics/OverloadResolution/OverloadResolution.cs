@@ -2655,7 +2655,7 @@ outerDefault:
             return true;
         }
 
-        private class ReturnStatements : BoundTreeWalker
+        private sealed class ReturnStatements : BoundTreeWalker
         {
             private readonly ArrayBuilder<BoundReturnStatement> _returns;
 

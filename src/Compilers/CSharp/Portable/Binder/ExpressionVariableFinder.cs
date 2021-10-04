@@ -485,7 +485,7 @@ namespace Microsoft.CodeAnalysis.CSharp
                                                     AssignmentExpressionSyntax deconstruction);
     }
 
-    internal class ExpressionVariableFinder : ExpressionVariableFinder<LocalSymbol>
+    internal sealed class ExpressionVariableFinder : ExpressionVariableFinder<LocalSymbol>
     {
         private Binder _scopeBinder;
         private Binder _enclosingBinder;
@@ -628,7 +628,7 @@ namespace Microsoft.CodeAnalysis.CSharp
         #endregion
     }
 
-    internal class ExpressionFieldFinder : ExpressionVariableFinder<Symbol>
+    internal sealed class ExpressionFieldFinder : ExpressionVariableFinder<Symbol>
     {
         private SourceMemberContainerTypeSymbol _containingType;
         private DeclarationModifiers _modifiers;

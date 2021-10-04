@@ -204,7 +204,7 @@ namespace Microsoft.CodeAnalysis.CSharp
             return externs1.WhereAsArray((e, replacedExternAliases) => !replacedExternAliases.Contains(e.Alias.Name), replacedExternAliases).AddRange(externs2);
         }
 
-        private class UsingTargetComparer : IEqualityComparer<NamespaceOrTypeAndUsingDirective>
+        private sealed class UsingTargetComparer : IEqualityComparer<NamespaceOrTypeAndUsingDirective>
         {
             public static readonly IEqualityComparer<NamespaceOrTypeAndUsingDirective> Instance = new UsingTargetComparer();
 

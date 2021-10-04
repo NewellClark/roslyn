@@ -16,7 +16,7 @@ using Roslyn.Utilities;
 
 namespace Microsoft.CodeAnalysis.CSharp
 {
-    internal partial class SwitchBinder : LocalScopeBinder
+    internal sealed partial class SwitchBinder : LocalScopeBinder
     {
         internal static SwitchBinder Create(Binder next, SwitchStatementSyntax switchSyntax)
         {
